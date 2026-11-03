@@ -18,9 +18,7 @@
             --fondo: #f4f4f4;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -70,30 +68,13 @@
             white-space: nowrap;
         }
 
-        .ir-historial:hover {
-            border-color: var(--rojo);
-            background: #1a1a1a;
-        }
-
-        .ir-historial .badge {
-            background: var(--rojo);
-            border-radius: 10px;
-            padding: 1px 7px;
-            font-size: 12px;
-        }
-
-        .ir-historial .badge:empty {
-            display: none;
-        }
+        .ir-historial:hover { border-color: var(--rojo); background: #1a1a1a; }
+        .ir-historial .badge { background: var(--rojo); border-radius: 10px; padding: 1px 7px; font-size: 12px; }
+        .ir-historial .badge:empty { display: none; }
 
         @media (max-width: 600px) {
-            header {
-                flex-wrap: wrap;
-            }
-
-            .ir-historial {
-                margin-left: 0;
-            }
+            header { flex-wrap: wrap; }
+            .ir-historial { margin-left: 0; }
         }
 
         #modalHistorial {
@@ -104,104 +85,26 @@
             max-height: 88vh;
         }
 
-        #modalHistorial::backdrop {
-            background: rgba(0, 0, 0, .55);
-        }
+        #modalHistorial::backdrop { background: rgba(0, 0, 0, .55); }
+        #modalHistorial .card { margin: 0; border: 0; padding: 22px; }
+        #modalHistorial .card h2 { font-size: 17px; padding-right: 44px; }
+        #modalHistorial .tabla-wrap { max-height: 60vh !important; }
+        #historial tr[data-i] { cursor: pointer; }
+        #historial tr[data-i]:hover td { background: #fff5f6; }
+        #vistaDetalle h3 { margin: 12px 0 10px; font-size: 18px; color: var(--rojo-osc); }
+        #vistaDetalle h4 { margin: 16px 0 0; font-size: 14px; }
+        .det { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 0; font-size: 13px; }
+        .det dt { color: var(--gris); }
+        .det dd { margin: 0; white-space: pre-line; }
+        #detLista { columns: 2; column-gap: 30px; margin: 0; padding: 10px 12px 10px 38px; font-size: 13px; line-height: 1.7; }
+        #detLista li { break-inside: avoid; }
+        #detLista li.vacio { list-style: none; }
+        @media (max-width: 600px) { #detLista { columns: 1; } }
 
-        #modalHistorial .card {
-            margin: 0;
-            border: 0;
-            padding: 22px;
-        }
+        .cerrar-modal { position: absolute; top: 14px; right: 14px; background: transparent; font-size: 18px; padding: 4px 10px; }
 
-        #modalHistorial .card h2 {
-            font-size: 17px;
-            padding-right: 44px;
-        }
-
-        #modalHistorial .tabla-wrap {
-            max-height: 60vh !important;
-        }
-
-        #historial tr[data-i] {
-            cursor: pointer;
-        }
-
-        #historial tr[data-i]:hover td {
-            background: #fff5f6;
-        }
-
-        #vistaDetalle h3 {
-            margin: 12px 0 10px;
-            font-size: 18px;
-            color: var(--rojo-osc);
-        }
-
-        #vistaDetalle h4 {
-            margin: 16px 0 0;
-            font-size: 14px;
-        }
-
-        .det {
-            display: grid;
-            grid-template-columns: max-content 1fr;
-            gap: 6px 14px;
-            margin: 0;
-            font-size: 13px;
-        }
-
-        .det dt {
-            color: var(--gris);
-        }
-
-        .det dd {
-            margin: 0;
-            white-space: pre-line;
-        }
-
-        #detLista {
-            columns: 2;
-            column-gap: 30px;
-            margin: 0;
-            padding: 10px 12px 10px 38px;
-            font-size: 13px;
-            line-height: 1.7;
-        }
-
-        #detLista li {
-            break-inside: avoid;
-        }
-
-        #detLista li.vacio {
-            list-style: none;
-        }
-
-        @media (max-width: 600px) {
-            #detLista {
-                columns: 1;
-            }
-        }
-
-        .cerrar-modal {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            background: transparent;
-            font-size: 18px;
-            padding: 4px 10px;
-        }
-
-        header h1 {
-            font-size: 20px;
-            margin: 0;
-            font-weight: 600;
-        }
-
-        header p {
-            margin: 2px 0 0;
-            color: #bbb;
-            font-size: 13px;
-        }
+        header h1 { font-size: 20px; margin: 0; font-weight: 600; }
+        header p { margin: 2px 0 0; color: #bbb; font-size: 13px; }
 
         main {
             display: grid;
@@ -213,10 +116,7 @@
         }
 
         @media (max-width: 900px) {
-            main {
-                grid-template-columns: 1fr;
-                padding: 12px;
-            }
+            main { grid-template-columns: 1fr; padding: 12px; }
         }
 
         .card {
@@ -246,22 +146,10 @@
             place-items: center;
         }
 
-        label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            margin: 10px 0 4px;
-        }
+        label { display: block; font-size: 13px; font-weight: 600; margin: 10px 0 4px; }
+        .hint { font-size: 12px; color: var(--gris); margin: 4px 0 0; }
 
-        .hint {
-            font-size: 12px;
-            color: var(--gris);
-            margin: 4px 0 0;
-        }
-
-        input[type=text],
-        textarea,
-        select {
+        input[type=text], textarea, select {
             width: 100%;
             padding: 9px 10px;
             border: 1px solid #ccc;
@@ -270,17 +158,8 @@
             font-size: 14px;
         }
 
-        textarea {
-            resize: vertical;
-            min-height: 70px;
-        }
-
-        input:focus,
-        textarea:focus,
-        select:focus {
-            outline: 2px solid var(--rojo);
-            border-color: transparent;
-        }
+        textarea { resize: vertical; min-height: 70px; }
+        input:focus, textarea:focus, select:focus { outline: 2px solid var(--rojo); border-color: transparent; }
 
         .drop {
             border: 2px dashed #bbb;
@@ -293,39 +172,16 @@
             transition: .15s;
         }
 
-        .drop:hover,
-        .drop.over {
-            border-color: var(--rojo);
-            background: #fff5f6;
-            color: var(--negro);
-        }
+        .drop:hover, .drop.over { border-color: var(--rojo); background: #fff5f6; color: var(--negro); }
+        .drop strong { color: var(--rojo); }
+        .drop.mal { border-color: var(--rojo); background: #fff5f6; }
+        .error { background: #fdecee; border: 1px solid #f1a7b1; color: #8a0d20; border-radius: 6px; padding: 8px 10px; font-size: 13px; margin-top: 10px; }
+        .drop input { display: none; }
 
-        .drop strong {
-            color: var(--rojo);
-        }
+        .row { display: flex; gap: 10px; align-items: end; }
+        .row > * { flex: 1; }
 
-        .drop input {
-            display: none;
-        }
-
-        .row {
-            display: flex;
-            gap: 10px;
-            align-items: end;
-        }
-
-        .row>* {
-            flex: 1;
-        }
-
-        .chk {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            font-weight: 400;
-            margin-top: 10px;
-        }
+        .chk { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 400; margin-top: 10px; }
 
         button {
             font: inherit;
@@ -338,121 +194,29 @@
             color: var(--negro);
         }
 
-        button:hover {
-            background: #e2e2e2;
-        }
+        button:hover { background: #e2e2e2; }
+        button.primary { background: var(--rojo); color: #fff; font-weight: 600; }
+        button.primary:hover { background: #a50d26; }
+        button.dark { background: #000; color: #fff; font-weight: 600; }
+        button.dark:hover { background: #333; }
+        button:disabled { opacity: .45; cursor: not-allowed; }
+        button.link { background: none; padding: 0; color: var(--rojo); font-size: 12px; text-decoration: underline; }
 
-        button.primary {
-            background: var(--rojo);
-            color: #fff;
-            font-weight: 600;
-        }
+        .tabla-wrap { max-height: 380px; overflow: auto; border: 1px solid var(--borde); border-radius: 6px; margin-top: 10px; }
+        table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        th { position: sticky; top: 0; background: #fafafa; text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--borde); z-index: 1; }
+        td { padding: 3px 8px; border-bottom: 1px solid #f0f0f0; }
+        tr.sel td { background: #fff1f3; }
+        td input[type=text] { border: 1px solid transparent; padding: 5px 6px; font-size: 13px; }
+        td input[type=text]:hover { border-color: #ddd; }
+        td.num { color: var(--gris); width: 28px; }
+        td.acc { width: 60px; white-space: nowrap; text-align: right; }
+        td.acc button { padding: 4px 7px; font-size: 12px; background: transparent; }
+        td.acc button:hover { background: #eee; }
 
-        button.primary:hover {
-            background: #a50d26;
-        }
+        .barra { display: flex; justify-content: space-between; align-items: center; font-size: 13px; margin-top: 10px; color: var(--gris); }
 
-        button.dark {
-            background: #000;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        button.dark:hover {
-            background: #333;
-        }
-
-        button:disabled {
-            opacity: .45;
-            cursor: not-allowed;
-        }
-
-        button.link {
-            background: none;
-            padding: 0;
-            color: var(--rojo);
-            font-size: 12px;
-            text-decoration: underline;
-        }
-
-        .tabla-wrap {
-            max-height: 380px;
-            overflow: auto;
-            border: 1px solid var(--borde);
-            border-radius: 6px;
-            margin-top: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-
-        th {
-            position: sticky;
-            top: 0;
-            background: #fafafa;
-            text-align: left;
-            padding: 7px 8px;
-            border-bottom: 1px solid var(--borde);
-            z-index: 1;
-        }
-
-        td {
-            padding: 3px 8px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        tr.sel td {
-            background: #fff1f3;
-        }
-
-        td input[type=text] {
-            border: 1px solid transparent;
-            padding: 5px 6px;
-            font-size: 13px;
-        }
-
-        td input[type=text]:hover {
-            border-color: #ddd;
-        }
-
-        td.num {
-            color: var(--gris);
-            width: 28px;
-        }
-
-        td.acc {
-            width: 60px;
-            white-space: nowrap;
-            text-align: right;
-        }
-
-        td.acc button {
-            padding: 4px 7px;
-            font-size: 12px;
-            background: transparent;
-        }
-
-        td.acc button:hover {
-            background: #eee;
-        }
-
-        .barra {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 13px;
-            margin-top: 10px;
-            color: var(--gris);
-        }
-
-        .preview-card {
-            position: sticky;
-            top: 20px;
-        }
-
+        .preview-card { position: sticky; top: 20px; }
         .preview {
             width: 100%;
             aspect-ratio: 841.89 / 595.28;
@@ -461,89 +225,21 @@
             background: #eee;
         }
 
-        .acciones {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 14px;
-        }
+        .acciones { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+        .acciones button { flex: 1; min-width: 200px; padding: 13px 14px; }
 
-        .acciones button {
-            flex: 1;
-            min-width: 200px;
-            padding: 13px 14px;
-        }
+        .progreso { height: 8px; background: #eee; border-radius: 4px; overflow: hidden; margin-top: 12px; display: none; }
+        .progreso div { height: 100%; width: 0; background: var(--rojo); transition: width .1s; }
+        #estado { font-size: 13px; color: var(--gris); margin-top: 8px; min-height: 18px; }
 
-        .progreso {
-            height: 8px;
-            background: #eee;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-top: 12px;
-            display: none;
-        }
+        .acciones-hist { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .acciones-hist button, .btn-like { font-size: 13px; padding: 8px 10px; }
+        .btn-like { display: inline-block; margin: 0; font-weight: 400; background: #eee; border-radius: 6px; cursor: pointer; }
+        .btn-like:hover { background: #e2e2e2; }
+        td.fecha { white-space: nowrap; color: var(--gris); width: 1%; }
 
-        .progreso div {
-            height: 100%;
-            width: 0;
-            background: var(--rojo);
-            transition: width .1s;
-        }
-
-        #estado {
-            font-size: 13px;
-            color: var(--gris);
-            margin-top: 8px;
-            min-height: 18px;
-        }
-
-        .acciones-hist {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
-
-        .acciones-hist button,
-        .btn-like {
-            font-size: 13px;
-            padding: 8px 10px;
-        }
-
-        .btn-like {
-            display: inline-block;
-            margin: 0;
-            font-weight: 400;
-            background: #eee;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .btn-like:hover {
-            background: #e2e2e2;
-        }
-
-        td.fecha {
-            white-space: nowrap;
-            color: var(--gris);
-            width: 1%;
-        }
-
-        .vacio {
-            padding: 20px;
-            text-align: center;
-            color: var(--gris);
-            font-size: 13px;
-        }
-
-        .aviso {
-            background: #fff8e1;
-            border: 1px solid #f3d36b;
-            border-radius: 6px;
-            padding: 8px 10px;
-            font-size: 12px;
-            margin-top: 10px;
-        }
+        .vacio { padding: 20px; text-align: center; color: var(--gris); font-size: 13px; }
+        .aviso { background: #fff8e1; border: 1px solid #f3d36b; border-radius: 6px; padding: 8px 10px; font-size: 12px; margin-top: 10px; }
     </style>
 </head>
 
@@ -554,8 +250,7 @@
             <h1>Generador de Certificados · Fundación ATE SM</h1>
             <p>Carga el Excel de participantes, completa los datos de la formación y descarga los diplomas en PDF.</p>
         </div>
-        <a href="#tarjetaHistorial" class="ir-historial" id="irHistorial">🕘 Historial <span class="badge"
-                id="histBadge"></span></a>
+        <a href="#tarjetaHistorial" class="ir-historial" id="irHistorial">🕘 Historial <span class="badge" id="histBadge"></span></a>
     </header>
 
     <main>
@@ -563,10 +258,10 @@
             <div class="card">
                 <h2><span class="n">1</span> Participantes</h2>
                 <label class="drop" id="drop">
-                    <input type="file" id="archivo" accept=".xlsx,.xls,.csv,.ods">
-                    <div id="dropTxt"><strong>Haz clic para elegir el Excel</strong> o arrástralo aquí<br><span
-                            class="hint">.xlsx · .xls · .csv</span></div>
+                    <input type="file" id="archivo" accept=".xlsx,.xls,.csv">
+                    <div id="dropTxt"><strong>Haz clic para elegir el Excel</strong> o arrástralo aquí<br><span class="hint">.xlsx · .xls · .csv</span></div>
                 </label>
+                <div id="errorArchivo" class="error" role="alert" hidden></div>
 
                 <div class="row" id="opcionesExcel" style="display:none">
                     <div>
@@ -590,16 +285,13 @@
                 <input type="text" id="titulo" placeholder="Ingresa el nombre de la formación">
                 <label for="descripcion">Descripción de la formación</label>
                 <textarea id="descripcion" rows="3" placeholder="Ingresa la descripción de la formación"></textarea>
-                <p class="hint">Incluye colegio, fecha y duración. Usa Enter para cortar la línea donde quieras (máx. 3
-                    líneas recomendadas).</p>
+                <p class="hint">Incluye colegio, fecha y duración. Usa Enter para cortar la línea donde quieras (máx. 3 líneas recomendadas).</p>
                 <div id="avisoExcel" class="aviso" style="display:none"></div>
             </div>
 
             <div class="card">
-                <h2><span class="n">3</span> Lista de participantes <span id="contador" class="hint"
-                        style="margin:0 0 0 auto;font-weight:400"></span></h2>
-                <label class="chk"><input type="checkbox" id="nombrePropio"> Convertir nombres a formato “Nombre Propio”
-                    (ej. MARÍA PÉREZ → María Pérez)</label>
+                <h2><span class="n">3</span> Lista de participantes <span id="contador" class="hint" style="margin:0 0 0 auto;font-weight:400"></span></h2>
+                <label class="chk"><input type="checkbox" id="nombrePropio"> Convertir nombres a formato “Nombre Propio” (ej. MARÍA PÉREZ → María Pérez)</label>
                 <div class="tabla-wrap">
                     <table>
                         <thead>
@@ -611,9 +303,7 @@
                             </tr>
                         </thead>
                         <tbody id="lista">
-                            <tr>
-                                <td colspan="4" class="vacio">Aún no hay participantes.</td>
-                            </tr>
+                            <tr><td colspan="4" class="vacio">Aún no hay participantes.</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -626,16 +316,13 @@
 
         <section>
             <div class="card preview-card">
-                <h2>Vista previa <span id="prevNombre" class="hint" style="margin:0 0 0 auto;font-weight:400"></span>
-                </h2>
+                <h2>Vista previa <span id="prevNombre" class="hint" style="margin:0 0 0 auto;font-weight:400"></span></h2>
                 <iframe id="preview" class="preview" title="Vista previa del certificado"></iframe>
                 <div class="acciones">
                     <button class="primary" id="btnZip" disabled>⬇ Descargar ZIP (un PDF por participante)</button>
                     <button class="dark" id="btnUnico" disabled>⬇ Un solo PDF con todos</button>
                 </div>
-                <div class="progreso" id="progreso">
-                    <div></div>
-                </div>
+                <div class="progreso" id="progreso"><div></div></div>
                 <div id="estado"></div>
             </div>
         </section>
@@ -644,31 +331,28 @@
     <dialog id="modalHistorial">
         <button class="cerrar-modal" id="cerrarModal" title="Cerrar">✕</button>
         <div class="card" id="tarjetaHistorial">
-            <h2>🕘 Historial de capacitaciones <span id="histInfo" class="hint"
-                    style="margin:0 0 0 auto;font-weight:400"></span></h2>
+            <h2>🕘 Historial de capacitaciones <span id="histInfo" class="hint" style="margin:0 0 0 auto;font-weight:400"></span></h2>
             <div id="vistaLista">
-                <p class="hint">Haz clic en una capacitación para ver sus datos y participantes. Cada vez que generas
-                    certificados, la capacitación queda registrada aquí con su fecha.</p>
-                <div class="acciones-hist">
-                    <button id="btnVincular">📎 Guardar automáticamente en archivo JSON</button>
-                    <button id="btnExportar">⬇ Exportar JSON</button>
-                    <label class="btn-like">⬆ Importar JSON<input type="file" id="importar"
-                            accept=".json,application/json" hidden></label>
-                </div>
-                <p id="archivoHist" class="hint"></p>
-                <div class="tabla-wrap" style="max-height:260px">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Fecha</th>
-                                <th>Capacitación</th>
-                                <th>Part.</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody id="historial"></tbody>
-                    </table>
-                </div>
+            <p class="hint">Haz clic en una capacitación para ver sus datos y participantes. Cada vez que generas certificados, la capacitación queda registrada aquí con su fecha.</p>
+            <div class="acciones-hist">
+                <button id="btnVincular">📎 Guardar automáticamente en archivo JSON</button>
+                <button id="btnExportar">⬇ Exportar JSON</button>
+                <label class="btn-like">⬆ Importar JSON<input type="file" id="importar" accept=".json,application/json" hidden></label>
+            </div>
+            <p id="archivoHist" class="hint"></p>
+            <div class="tabla-wrap" style="max-height:260px">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Capacitación</th>
+                            <th>Part.</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="historial"></tbody>
+                </table>
+            </div>
             </div>
             <div id="vistaDetalle" hidden>
                 <button class="link" id="volverHist">← Volver al historial</button>
@@ -792,19 +476,51 @@
 
         // ---------- Excel ----------
 
+        // Solo se aceptan Excel (.xlsx, .xls) y CSV; se revisa la extensión y el contenido real del archivo
+        const EXTENSIONES = ['xlsx', 'xls', 'csv'];
+
+        function errorArchivo(msg) {
+            const caja = $('errorArchivo');
+            caja.hidden = !msg;
+            caja.textContent = msg ? '⚠ ' + msg : '';
+            $('drop').classList.toggle('mal', !!msg);
+            $('archivo').value = '';
+        }
+
+        function contenidoValido(ext, bytes) {
+            const empieza = (...b) => b.every((v, i) => bytes[i] === v);
+            if (ext === 'xlsx') return empieza(0x50, 0x4B, 0x03, 0x04);              // ZIP (Office Open XML)
+            if (ext === 'xls') return empieza(0xD0, 0xCF, 0x11, 0xE0) || empieza(0x50, 0x4B, 0x03, 0x04);
+            return !bytes.slice(0, 4096).includes(0);                                // CSV: texto plano
+        }
+
         function leerArchivo(file) {
+            const ext = (file.name.split('.').pop() || '').toLowerCase();
+            if (!file.name.includes('.') || !EXTENSIONES.includes(ext)) {
+                errorArchivo(`"${file.name}" no es un archivo permitido. Solo puedes subir archivos Excel (.xlsx, .xls) o CSV (.csv).`);
+                return;
+            }
+            if (!file.size) {
+                errorArchivo(`"${file.name}" está vacío.`);
+                return;
+            }
             const r = new FileReader();
             r.onload = e => {
+                if (!contenidoValido(ext, new Uint8Array(e.target.result))) {
+                    errorArchivo(`"${file.name}" tiene extensión .${ext}, pero su contenido no es un ${ext === 'csv' ? 'CSV' : 'Excel'} válido.`);
+                    return;
+                }
+                errorArchivo('');
                 estado.archivo = file.name;
                 try {
                     estado.libro = XLSX.read(e.target.result, { type: 'array' });
                 } catch (err) {
-                    alert('No se pudo leer el archivo: ' + err.message);
+                    errorArchivo(`No se pudo leer "${file.name}": ${err.message}`);
                     return;
                 }
-                $('dropTxt').innerHTML = `<strong>${file.name}</strong><br><span class="hint">Haz clic para cambiar el archivo</span>`;
+                $('dropTxt').innerHTML = `<strong>${esc(file.name)}</strong><br><span class="hint">Haz clic para cambiar el archivo</span>`;
                 const sel = $('hoja');
-                sel.innerHTML = estado.libro.SheetNames.map((n, i) => `<option value="${i}">${n}</option>`).join('');
+                sel.innerHTML = estado.libro.SheetNames.map((n, i) => `<option value="${i}">${esc(n)}</option>`).join('');
                 // Elegir la primera hoja que tenga una columna "nombre"
                 const idx = estado.libro.SheetNames.findIndex(n => buscarEncabezado(filasDe(n)).fila >= 0);
                 sel.value = Math.max(idx, 0);
@@ -854,7 +570,7 @@
             }
             $('columna').innerHTML = [...Array(ancho)].map((_, i) => {
                 const t = (cabecera[i] || '').split('\n')[0].slice(0, 30);
-                return `<option value="${i}">${letras(i)}${t ? ' · ' + t : ''}</option>`;
+                return `<option value="${i}">${letras(i)}${t ? ' · ' + esc(t) : ''}</option>`;
             }).join('');
             $('columna').value = colPorDefecto;
 

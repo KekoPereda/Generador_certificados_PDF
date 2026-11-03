@@ -14,7 +14,9 @@ No hay que instalar nada: basta con hacer doble clic en `index.html`.
 
 ## Cómo se usa
 
-1. **Participantes.** Arrastra el Excel al recuadro o haz clic para elegirlo (`.xlsx`, `.xls`, `.csv`, `.ods`).
+1. **Participantes.** Arrastra el Excel al recuadro o haz clic para elegirlo. Solo se aceptan archivos Excel (`.xlsx`, `.xls`) o CSV (`.csv`).
+   - **Otros archivos:** si subes otra cosa (por ejemplo un `.js`, un PDF o una imagen), aparece un mensaje en rojo y el archivo no se carga.
+   - **Extensión cambiada:** también se rechaza un archivo con extensión de Excel cuyo contenido no sea realmente un Excel.
    - La página busca sola la hoja y la columna cuyo encabezado contiene "Nombre". Si no acierta, elígelas en los selectores **Hoja** y **Columna de nombres**.
    - También puedes pegar nombres a mano, uno por línea, y pulsar **Agregar a la lista**.
 2. **Datos de la formación.** Escribe el **nombre de la formación** y la **descripción** (colegio, fecha y duración).
